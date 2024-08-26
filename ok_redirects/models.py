@@ -31,7 +31,7 @@ class Redirect(models.Model):
     )
     languages = MultipleChoiceArrayField(
         models.CharField(
-            max_length=2,
+            max_length=10,
             choices=LANGUAGES,
             blank=True
         ),
@@ -57,7 +57,7 @@ class Redirect(models.Model):
         pgettext_lazy("ok:redirects", 'to language'),
         blank=True,
         choices=LANGUAGES,
-        max_length=5,
+        max_length=10,
         help_text=pgettext_lazy(
             "ok:redirects",
             "Leave blank to redirect to the current language on the site"
